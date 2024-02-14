@@ -1,0 +1,15 @@
+0 0 junkfile 4: 0 abcd
+0 1 junkfile 4: 1 abcd
+0 2 junkfile 4: 2 abcd
+1 0 junkfile 3: 0 abcd
+1 1 junkfile 3: 1 abcd
+1 2 junkfile 3: 2 abcd
+2 0 junkfile 2: 0 abcd
+2 1 junkfile 2: 1 abcd
+2 2 junkfile 2: 2 abcd
+3 0 junkfile 0: 0 abcd
+3 1 junkfile 0: 1 abcd
+3 2 junkfile 0: 2 abcd
+4 0 junkfile 1: 0 abcd
+4 1 junkfile 1: 1 abcd
+4 2 junkfile 1: 2 abcd
