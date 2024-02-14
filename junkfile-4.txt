@@ -1,3 +1,3 @@
-file: 4 0 abcd
-file: 4 1 abcd
-file: 4 2 abcd
+junkfile 4: 0 abcd
+junkfile 4: 1 abcd
+junkfile 4: 2 abcd
