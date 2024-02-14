@@ -1,3 +1,0 @@
-file: 0 0 abcd
-file: 0 1 abcd
-file: 0 2 abcd
