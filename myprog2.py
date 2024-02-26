@@ -3,7 +3,7 @@
 from typing import Union
 
 
-def myfunc(numbers: Union[list, tuple]) -> int:
+def myfunc(numbers: Union[list[int], tuple[int]]) -> int:
     return numbers[0]
 
 
