@@ -1,4 +1,4 @@
-def hello(name='whoever'):
+def hello(name: str = 'whoever'):
     return f'Hello, {name}!'
 
 
