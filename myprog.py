@@ -1,4 +1,4 @@
-def mysum(numbers: list[int]):
+def mysum(numbers: list[int]) -> int:
     total = 0
 
     for one_number in numbers:
