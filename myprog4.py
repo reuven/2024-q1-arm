@@ -1,7 +1,7 @@
 from typing import Optional
 
 
-def hello(name: None | str = 'whoever') -> str:
+def hello(name: Optional[str] = 'whoever') -> str:
     return f'Hello, {name}!'
 
 
