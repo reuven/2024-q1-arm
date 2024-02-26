@@ -1,4 +1,7 @@
-def myfunc(choice: str) -> str:
+from typing import Literal
+
+
+def myfunc(choice: Literal['a', 'b']) -> str:
     if choice == 'a':
         return 'Yay! It is a!'
     elif choice == 'b':
