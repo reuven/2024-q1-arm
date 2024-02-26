@@ -10,4 +10,4 @@ def mysum(numbers):
 print(mysum([10, 20, 30]))
 print(mysum([10, 20.5, 30]))
 print(mysum([10, 'abcd', 30]))
-print(mysum(10, 20, 30))
+# print(mysum(10, 20, 30))
