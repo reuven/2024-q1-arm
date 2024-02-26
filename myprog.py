@@ -1,7 +1,8 @@
 from typing import Sequence, Iterable
 
 
-def mysum(numbers: Sequence[int | float]) -> int | float:
+# def mysum(numbers: Sequence[int | float]) -> int | float:
+def mysum(numbers: Iterable[int | float]) -> int | float:
     total: float = 0
 
     for one_number in numbers:
