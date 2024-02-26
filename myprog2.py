@@ -3,7 +3,7 @@
 from typing import Union, Iterable
 
 
-def myfunc(numbers: Iteratable[int]) -> int:
+def myfunc(numbers: Iterable[int]) -> int:
     return numbers[0]
 
 
