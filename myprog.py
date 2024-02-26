@@ -1,4 +1,4 @@
-def mysum(numbers):
+def mysum(numbers: list):
     total = 0
 
     for one_number in numbers:
@@ -8,6 +8,8 @@ def mysum(numbers):
 
 
 print(mysum([10, 20, 30]))
+print(mysum((10, 20, 30)))
+print(mysum({10, 20, 30}))
 print(mysum([10, 20.5, 30]))
 print(mysum([10, 'abcd', 30]))
 # print(mysum(10, 20, 30))
