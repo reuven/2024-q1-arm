@@ -1,5 +1,5 @@
 def mysum(numbers: list[int | float]) -> int:
-    total = 0
+    total: float = 0
 
     for one_number in numbers:
         total += one_number
