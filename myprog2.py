@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from typing import Union, Iterable
+from typing import Union, Iterable, Sequence
 
 
 def myfunc(numbers: Sequence[int]) -> int:
