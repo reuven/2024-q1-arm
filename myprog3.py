@@ -1,7 +1,11 @@
-def myfunc(choice):
+def myfunc(choice: str):
     if choice == 'a':
         return 'Yay! It is a!'
     elif choice == 'b':
         return 'Boo, it is b!'
     else:
         raise ValueError('Bad value!')
+
+
+print(myfunc('a'))
+print(myfunc('b'))
