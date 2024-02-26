@@ -1,4 +1,4 @@
-def myfunc(choice: str):
+def myfunc(choice: str) -> str:
     if choice == 'a':
         return 'Yay! It is a!'
     elif choice == 'b':
