@@ -8,3 +8,4 @@ def myfunc(numbers: Union[list, tuple]) -> int:
 
 
 print(myfunc([10, 20, 30]))
+print(myfunc((10, 20, 30)))
