@@ -12,3 +12,4 @@ def myfunc(choice: Literal['a', 'b']) -> str:
 
 print(myfunc('a'))
 print(myfunc('b'))
+print(myfunc('c'))
