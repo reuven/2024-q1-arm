@@ -5,5 +5,5 @@ def hello(name: Optional[str] = 'whoever') -> str:
     return f'Hello, {name}!'
 
 
-print(hello())
+print(hello(None))
 print(hello('world'))
