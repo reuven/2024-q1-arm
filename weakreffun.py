@@ -8,7 +8,7 @@ class MyClass:
         print(f'I am dead {self.x=}')
 
 m1 = MyClass(10)    
-m2 = MyClass(20)
+m2 = m2
 m3 = weakref.ref(m1)
 
 print('About to delete m1')
