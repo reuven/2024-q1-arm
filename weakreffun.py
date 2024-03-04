@@ -19,4 +19,5 @@ print('About to delete m2')
 del(m2)
 print(f'{m3()=}')
 
+print('Program about to end')
 
