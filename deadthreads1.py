@@ -11,8 +11,10 @@ def long_hello_goodbye():
 
 
 def launch_thread():
+    print('Start launch')
     t = threading.Thread(target=long_hello_goodbye)
     t.start()
+    print('End launch')
 
 
 print('Running launch_thread')
