@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from concurrent.futures import ThreadPoolExecutor, wait, FIRST_COMPLETED
+from concurrent.futures import ProcessPoolExecutor, wait, FIRST_COMPLETED
 import time
 import random
 
@@ -9,7 +9,7 @@ def square(x):
     return x ** 2
 
 
-with ThreadPoolExecutor(max_workers=10) as executor:
+with ProcessPoolExecutor(max_workers=10) as executor:
     all_results = executor.map(square, range(20))
 
     for one_result in all_results:
