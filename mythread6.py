@@ -30,5 +30,5 @@ while threading.active_count() > 1:
             else:
                 print(f'\nJoined {one_thread.name}')
 
-while not output.empty:
+while not output.empty():
     print(output.get())
