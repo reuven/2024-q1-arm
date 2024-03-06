@@ -6,14 +6,16 @@ import random
 import queue
 
 output = queue.Queue()
+lock = threading.Lock()
 
 
 def hello(n):
     time.sleep(random.randint(0, 3))
-    print(f'{n} Hello!')
-    output.put(f'Hello from {n}')
-    output.put(f'Goodbye from {n}')
-    print(f'{n} Goodbye!')
+    with lock:
+        print(f'{n} Hello!')
+        output.put(f'Hello from {n}')
+        output.put(f'Goodbye from {n}')
+        print(f'{n} Goodbye!')
 
 
 for i in range(10):
