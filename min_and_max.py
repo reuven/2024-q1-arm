@@ -2,7 +2,7 @@
 
 def min_and_max(numbers):
     if not numbers:
-        return None
+        raise ValueError('Empty values!')
 
     min_number = numbers[0]
     max_number = numbers[0]
