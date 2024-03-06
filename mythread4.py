@@ -23,5 +23,4 @@ for one_thread in threading.enumerate():
     one_thread.join()
     print(f'\nJoining {one_thread.name}')
 
-
 print('Starting something new')
