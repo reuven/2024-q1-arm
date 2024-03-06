@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-import threading
+import multiprocessing
 import queue
 import glob
 import time
