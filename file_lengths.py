@@ -34,3 +34,7 @@ while threading.active_count() > 1:
 
 while not q.empty():
     print(q.get())
+
+end_time = time.time()
+
+print(f'Total time: {(end_time - start_time):0.2f}')
