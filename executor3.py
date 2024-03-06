@@ -10,14 +10,15 @@ def square(x):
     return x ** 2
 
 
-with ProcessPoolExecutor(max_workers=10) as executor:
-    all_results = []
-    for one_number in range(20):
-        one_result = executor.submit(square, one_number)
-        all_results.append(one_result)
+if __name__ == '__main__':
 
-    done, not_done = wait(
-        all_results, return_when=FIRST_COMPLETED)
+    with ProcessPoolExecutor(max_workers=10) as executor:
+        all_results = []
+        for one_number in range(20):
+            one_result = executor.submit(square, one_number)
+            all_results.append(one_result)
 
-    for one_result in done:
-        print(one_result.result())
+        done, not_done = wait(all_results)
+
+        for one_result in done:
+            print(one_result.result())
