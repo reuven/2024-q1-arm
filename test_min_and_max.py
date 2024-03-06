@@ -11,4 +11,5 @@ def test_floats():
 
 
 def test_empty():
-    assert min_and_max([]) == ValueError
+    with pytest.raises(ValueError):
+        min_and_max([])
