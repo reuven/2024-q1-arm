@@ -21,11 +21,15 @@ def file_length(filename):
     q.put((filename, total_length))
 
 
+all_processes = []
 for one_filename in glob.glob('/etc/*.conf'):
     p = multiprocessing.Process(target=file_length, args=(
         one_filename,), name=f'proc-{one_filename}')
+    all_processes.append(p)
     p.start()
 
+for one_process in all_processes:
+    one_process.join()
 
 while not q.empty():
     print(q.get())
