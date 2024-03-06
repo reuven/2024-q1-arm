@@ -16,9 +16,10 @@ for i in range(10):
 
 print('Done!')
 
-for one_thread in threading.enumerate():
-    if one_thread != threading.current_thread():
-        one_thread.join()
-        print(f'\nJoining {one_thread.name}')
+while threading.active_count() > 1:
+    for one_thread in threading.enumerate():
+        if one_thread != threading.current_thread():
+            one_thread.join(0.001)
+            print(f'\nJoining {one_thread.name}')
 
 print('Starting something new')
