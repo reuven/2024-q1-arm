@@ -1,5 +1,6 @@
 import pytest
 from person import Person
+import os
 
 # fixture
 
@@ -15,3 +16,17 @@ def test_repr(sample_person):
 
 def test_initials(sample_person):
     assert sample_person.initials() == 'F L'
+
+
+@pytest.fixture
+def simple_tempfile():
+    filename = '/tmp/abcd.txt'
+    with open(filename) as f:
+        f.write('abcd\n')
+        f.write('efgh\n')
+        f.write('ijkl\n')
+        f.write('mnop\n')
+
+    yield filename
+
+    os.remove(filename)
