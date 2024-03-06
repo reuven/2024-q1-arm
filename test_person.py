@@ -21,7 +21,7 @@ def test_initials(sample_person):
 @pytest.fixture
 def simple_tempfile():
     filename = '/tmp/abcd.txt'
-    with open(filename) as f:
+    with open(filename, 'w') as f:
         f.write('abcd\n')
         f.write('efgh\n')
         f.write('ijkl\n')
