@@ -19,7 +19,7 @@ for i in range(10):
 
 print('Done!')
 
-for one_thread in all_threads:
+for one_thread in threading.enumerate():
     one_thread.join()
     print(f'\nJoining {one_thread.name}')
 
