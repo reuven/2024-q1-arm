@@ -4,6 +4,7 @@ from person import Person
 # fixture
 
 
+@pytest.fixture
 def sample_person():
     return Person('FirstName', 'LastName')
 
