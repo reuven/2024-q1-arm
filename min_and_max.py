@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 
 def min_and_max(numbers):
+    if not numbers:
+        return None
+
     min_number = numbers[0]
     max_number = numbers[0]
 
