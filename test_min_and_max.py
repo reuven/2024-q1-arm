@@ -13,3 +13,8 @@ def test_floats():
 def test_empty():
     with pytest.raises(ValueError):
         min_and_max([])
+
+
+def test_not_empty():
+    with pytest.raises(ValueError):
+        min_and_max([])
