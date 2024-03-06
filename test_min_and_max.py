@@ -18,3 +18,7 @@ def test_empty():
 def test_not_empty():
     with pytest.raises(ValueError):
         min_and_max([10, 20, 30])
+
+
+def test_strings():
+    assert (min_and_max('this is a ridiculous test'.split())) == ('a', 'this')
