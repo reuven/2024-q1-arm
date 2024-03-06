@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from concurrent.futures import ThreadPoolExecutor
+from concurrent.futures import ThreadPoolExecutor, wait
 
 
 def square(x):
@@ -13,4 +13,7 @@ with ThreadPoolExecutor() as executor:
         one_result = executor.submit(square, one_number)
         all_results.append(one_result)
 
-    print(all_results)
+    done, not_done = wait(all_results)
+
+    for one_result in done:
+        print(one_result)
