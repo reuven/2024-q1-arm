@@ -15,7 +15,3 @@ def test_repr(sample_person):
 
 def test_initials(sample_person):
     assert sample_person.initials() == 'F L'
-
-
-def test_initials_are(sample_person):
-    assert sample_person.initials_are('F L')

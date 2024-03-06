@@ -9,6 +9,3 @@ class Person:
 
     def initials(self):
         return f'{self.first[0]} {self.last[0]}'
-
-    def initials_are(self, other):
-        return f'{self.first[0]} {self.last[0]}' == other
