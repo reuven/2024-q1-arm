@@ -16,7 +16,7 @@ def file_length(filename, q):
         for one_line in open(filename):
             total_length += len(one_line)
     except Exception as e:   # never do this!
-        print(f'Ignoring {one_filename}: {e}')
+        print(f'Ignoring {filename}: {e}')
 
     q.put((filename, total_length))
 
