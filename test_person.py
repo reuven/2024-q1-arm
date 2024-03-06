@@ -9,11 +9,9 @@ def sample_person():
     return Person('FirstName', 'LastName')
 
 
-def test_repr():
-    p = Person('FirstName', 'LastName')
+def test_repr(sample_person):
     assert str(p) == 'FirstName LastName'
 
 
-def test_initials():
-    p = Person('FirstName', 'LastName')
+def test_initials(sample_person):
     assert p.initials() == 'F L'
