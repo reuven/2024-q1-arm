@@ -3,10 +3,10 @@
 import threading
 
 
-def hello():
-    print('Hello!')
+def hello(n):
+    print(f'{n} Hello!')
 
 
 for i in range(10):
-    t = threading.Thread(target=hello)
+    t = threading.Thread(target=hello, )
     t.start()
