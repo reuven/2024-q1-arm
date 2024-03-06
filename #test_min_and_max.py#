@@ -1,4 +1,0 @@
-from min_and_max import min_and_max
-
-def test_simple():
-    assert m
