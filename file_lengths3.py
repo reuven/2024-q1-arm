@@ -1,13 +1,8 @@
 #!/usr/bin/env python3
 
-import threading
-import queue
-import glob
-import time
+from concurrent.futures import ThreadPoolExecutor, wait
 
 start_time = time.time()
-
-q = queue.Queue()
 
 
 def file_length(filename):
