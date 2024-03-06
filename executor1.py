@@ -13,7 +13,8 @@ with ThreadPoolExecutor(max_workers=10) as executor:
         one_result = executor.submit(square, one_number)
         all_results.append(one_result)
 
-    done, not_done = wait(all_results)
+    done, not_done = wait(
+        all_results, return_when=concurrent.futures.FIRST_COMPLETED)
 
     for one_result in done:
         print(one_result.result())
