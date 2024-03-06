@@ -24,7 +24,7 @@ def file_length(filename):
 all_processes = []
 for one_filename in glob.glob('/etc/*.conf'):
     p = multiprocessing.Process(target=file_length, args=(
-        one_filename,), name=f'proc-{one_filename}')
+        one_filename, q), name=f'proc-{one_filename}')
     all_processes.append(p)
     p.start()
 
