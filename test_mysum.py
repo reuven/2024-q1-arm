@@ -11,3 +11,7 @@ def test_floats():
 
 def test_bad_floats():
     assert round(mysum([0.1, 0.2]), 2) == 0.3
+
+
+def test_bad_syntax():
+    assert mysummmmmm([10, 20]) == 30
