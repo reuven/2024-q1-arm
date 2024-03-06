@@ -11,7 +11,7 @@ output = queue.Queue()
 def hello(n):
     time.sleep(random.randint(0, 3))
     print(f'{n} Hello!')
-    output[0] += n     # output[0] = output[0] + n
+    output.put(f'Hello from {n}')
 
 
 for i in range(10):
