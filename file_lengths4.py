@@ -20,15 +20,10 @@ def file_length(filename):
 
 
 with ThreadPoolExecutor() as executor:
-    all_results = []
-    for one_filename in glob.glob('/etc/*.conf'):
-        one_result = executor.submit(file_length, one_filename)
-        all_results.append(one_result)
+    all_results = executor.map(file_length, glob.glob('/etc/*.conf'))
 
-    done, not_done = wait(all_results)
-
-    for one_result in done:
-        print(one_result.result())
+    for one_result in all_results:
+        print(one_result)
 
 end_time = time.time()
 
