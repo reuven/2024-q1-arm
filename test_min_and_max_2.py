@@ -4,13 +4,13 @@ from min_and_max import min_and_max
 # parameterization
 
 
-@pytest.parametrize('input_values, expected_tuple',
-                    [                                     # list of tuples to pass to each test
-                        # (input_values, expected_tuple)
-                        ([10, 20, 30, -5, -7], (-7, 30)),
-                        ([10.5, 20.3, 30.7, -5.2, -7.1], (-7.1, 30.7)),
-                        ('this is a ridiculous test'.split(), ('a', 'this'))
-                    ])
+@pytest.mark.parametrize('input_values, expected_tuple',
+                         [                                     # list of tuples to pass to each test
+                             # (input_values, expected_tuple)
+                             ([10, 20, 30, -5, -7], (-7, 30)),
+                             ([10.5, 20.3, 30.7, -5.2, -7.1], (-7.1, 30.7)),
+                             ('this is a ridiculous test'.split(), ('a', 'this'))
+                         ])
 def test_template(input_values, expected_tuple):
     assert min_and_max(input_values) == expected_tuple
 
