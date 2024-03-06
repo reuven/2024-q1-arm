@@ -9,7 +9,7 @@ def square(x):
 
 with ThreadPoolExecutor(max_workers=10) as executor:
     all_results = []
-    for one_number in range(10):
+    for one_number in range(20):
         one_result = executor.submit(square, one_number)
         all_results.append(one_result)
 
