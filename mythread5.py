@@ -19,7 +19,7 @@ print('Done!')
 while threading.active_count() > 1:
     for one_thread in threading.enumerate():
         if one_thread != threading.current_thread():
-            one_thread.join(0.001)
+            one_thread.join(0.001)   # non-blocking join
             print(f'\nJoining {one_thread.name}')
 
 print('Starting something new')
