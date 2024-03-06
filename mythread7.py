@@ -16,7 +16,7 @@ def hello(n):
         print(f'{n} Hello!')
         output.put(f'Hello from {n}')
         output.put(f'Goodbye from {n}')
-        print(f'{n} Goodbye!')
+        print(f'{n} Gkoodbye!')
         # __exit__()
 
 
