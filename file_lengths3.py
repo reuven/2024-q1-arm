@@ -17,19 +17,16 @@ def file_length(filename):
     return filename, total_length
 
 
-with ThreadPoolExecutor as executor:
+with ThreadPoolExecutor() as executor:
     all_results = []
     for one_filename in glob.glob('/etc/*.conf'):
-        executor.sumibt
+        one_result = executor.submit(file_length, one_filename)
+        all_results.append(one_result)
 
+    done, not_done = wait(all_results)
 
-while threading.active_count() > 1:
-    for one_thread in threading.enumerate():
-        if one_thread != threading.current_thread():
-            one_thread.join(0.001)
-
-while not q.empty():
-    print(q.get())
+    for one_result in done:
+        print(one_result.result())
 
 end_time = time.time()
 
