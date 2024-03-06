@@ -29,4 +29,4 @@ while threading.active_count() > 1:
             else:
                 print(f'\nJoined {one_thread.name}')
 
-print('Total is {output[0]}')
+print(f'Total is {output[0]}')
