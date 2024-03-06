@@ -17,4 +17,4 @@ def test_empty():
 
 def test_not_empty():
     with pytest.raises(ValueError):
-        min_and_max([])
+        min_and_max([10, 20, 30])
