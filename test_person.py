@@ -4,9 +4,9 @@ from person import Person
 # fixture
 
 
-@pytest.fixture
-def sample_person():
-    return Person('FirstName', 'LastName')
+@pytest.fixture(params=['FirstName', 'OtherFirstName'])
+def sample_person(request):
+    return Person(request.param, 'LastName')
 
 
 def test_repr(sample_person):
