@@ -21,19 +21,21 @@ def file_length(filename, q):
     q.put((filename, total_length))
 
 
-all_processes = []
-for one_filename in glob.glob('/etc/*.conf'):
-    p = multiprocessing.Process(target=file_length, args=(
-        one_filename, q), name=f'proc-{one_filename}')
-    all_processes.append(p)
-    p.start()
+if __name__ == '__main__':
 
-for one_process in all_processes:
-    one_process.join()
+    all_processes = []
+    for one_filename in glob.glob('/etc/*.conf'):
+        p = multiprocessing.Process(target=file_length, args=(
+            one_filename, q), name=f'proc-{one_filename}')
+        all_processes.append(p)
+        p.start()
 
-while not q.empty():
-    print(q.get())
+    for one_process in all_processes:
+        one_process.join()
 
-end_time = time.time()
+    while not q.empty():
+        print(q.get())
 
-print(f'Total time: {(end_time - start_time):0.5f}')
+    end_time = time.time()
+
+    print(f'Total time: {(end_time - start_time):0.5f}')
