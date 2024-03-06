@@ -9,7 +9,7 @@ start_time = time.time()
 q = multiprocessing.Queue()
 
 
-def file_length(filename):
+def file_length(filename, q):
     total_length = 0
 
     try:
