@@ -1,8 +1,6 @@
 import pytest
 from min_and_max import min_and_max
 
-# parameterization
-
 
 @pytest.mark.parametrize('input_values, expected_tuple',
                          [                                     # list of tuples to pass to each test
