@@ -30,3 +30,7 @@ def simple_tempfile():
     yield filename
 
     os.remove(filename)
+
+
+def test_file_contents(simple_tempfile):
+    assert len(open(simple_tempfile).read()) == 20
