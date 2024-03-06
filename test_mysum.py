@@ -10,4 +10,4 @@ def test_floats():
 
 
 def test_bad_floats():
-    assert mysum([0.1, 0.2]), 2 == 0.3
+    assert mysum([0.1, 0.2]) == 0.3
