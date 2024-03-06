@@ -4,6 +4,8 @@ from concurrent.futures import ThreadPoolExecutor, wait
 
 
 def square(x):
+    if x == 4:
+        raise TypeError('I hate 4!')
     return x ** 2
 
 
