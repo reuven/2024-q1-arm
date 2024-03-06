@@ -12,6 +12,7 @@ def hello(n):
     time.sleep(random.randint(0, 3))
     print(f'{n} Hello!')
     output.put(f'Hello from {n}')
+    output.put(f'Goodbye from {n}')
     print(f'{n} Goodbye!')
 
 
