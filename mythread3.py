@@ -20,8 +20,8 @@ for i in range(10):
 print('Done!')
 
 for one_thread in all_threads:
-    print(f'\nJoining {one_thread.name}')
     one_thread.join()
+    print(f'\nJoining {one_thread.name}')
 
 
 print('Starting something new')
