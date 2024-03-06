@@ -6,3 +6,6 @@ class Person:
 
     def __repr__(self):
         return f'{self.first} {self.last}'
+
+    def initials(self):
+        return f'{self.first[0]} {self.last[0]}'
