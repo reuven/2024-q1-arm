@@ -1,0 +1,15 @@
+#!/usr/bin/env python3
+
+import threading
+import queue
+
+q = queue.Queue()
+
+def file_length(filename):
+    output = 0
+
+    for one_line in open(filename):
+        output += len(one_line)
+
+    q.put()
+    
