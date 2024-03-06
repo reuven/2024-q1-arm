@@ -9,8 +9,10 @@ def square(x):
     return x ** 2
 
 
-with ProcessPoolExecutor(max_workers=10) as executor:
-    all_results = executor.map(square, range(20))
+if __name__ == '__main__':
 
-    for one_result in all_results:
-        print(one_result)
+    with ProcessPoolExecutor(max_workers=10) as executor:
+        all_results = executor.map(square, range(20))
+
+        for one_result in all_results:
+            print(one_result)
