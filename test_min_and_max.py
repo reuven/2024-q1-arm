@@ -10,4 +10,4 @@ def test_floats():
 
 
 def test_empty():
-    assert min_and_max([])
+    assert min_and_max([]) == ValueError
