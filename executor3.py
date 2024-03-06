@@ -12,7 +12,7 @@ def square(x):
 
 if __name__ == '__main__':
 
-    with ProcessPoolExecutor(max_workers=10) as executor:
+    with ProcessPoolExecutor(max_workers=50) as executor:
         all_results = []
         for one_number in range(20):
             one_result = executor.submit(square, one_number)
