@@ -12,7 +12,7 @@ def long_hello_goodbye():
 
 def launch_thread():
     print('Start launch')
-    t = threading.Thread(target=long_hello_goodbye)
+    t = threading.Thread(target=long_hello_goodbye, daemon=True)
     t.start()
     print('End launch')
 
