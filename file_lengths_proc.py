@@ -1,13 +1,12 @@
 #!/usr/bin/env python3
 
 import multiprocessing
-import queue
 import glob
 import time
 
 start_time = time.time()
 
-q = queue.Queue()
+q = multiprocessing.Queue()
 
 
 def file_length(filename):
