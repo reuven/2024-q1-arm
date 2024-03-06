@@ -1,3 +1,4 @@
+import pytest
 from min_and_max import min_and_max
 
 
