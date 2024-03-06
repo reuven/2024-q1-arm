@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from concurrent.futures import ProcessPoolExecutor, wait, FIRST_COMPLETED
+from concurrent.futures import ProcessPoolExecutor, wait
 import time
 import random
 
