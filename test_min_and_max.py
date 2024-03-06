@@ -7,3 +7,7 @@ def test_simple():
 
 def test_floats():
     assert min_and_max([10.5, 20.3, 30.7, -5.2, -7.1]) == (-7.1, 30.7)
+
+
+def test_empty():
+    assert min_and_max([])
