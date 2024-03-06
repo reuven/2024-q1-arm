@@ -7,7 +7,7 @@ def square(x):
     return x ** 2
 
 
-with ThreadPoolExecutor(workers=10) as executor:
+with ThreadPoolExecutor(max_workers=10) as executor:
     all_results = []
     for one_number in range(10):
         one_result = executor.submit(square, one_number)
