@@ -12,8 +12,5 @@ def square(x):
 with ThreadPoolExecutor(max_workers=10) as executor:
     all_results = executor.map(square, range(20))
 
-    done, not_done = wait(
-        all_results, return_when=FIRST_COMPLETED)
-
-    for one_result in done:
-        print(one_result.result())
+    for one_result in all_results:
+        print(one_result)
