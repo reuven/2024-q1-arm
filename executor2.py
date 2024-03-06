@@ -6,7 +6,6 @@ import random
 
 
 def square(x):
-    time.sleep(random.randint(0, 3))
     return x ** 2
 
 
