@@ -32,5 +32,5 @@ def simple_tempfile():
     os.remove(filename)
 
 
-def test_file_contents(simple_tempfile):
+def test_file_length(simple_tempfile):
     assert len(open(simple_tempfile).read()) == 20
