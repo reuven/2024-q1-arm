@@ -10,8 +10,11 @@ q = queue.Queue()
 def file_length(filename):
     total_length = 0
 
-    for one_line in open(filename):
-        total_length += len(one_line)
+    try:
+        for one_line in open(filename):
+            total_length += len(one_line)
+    except Exception as e:   # never do this!
+        print(f'Ignoring {one_filename}: {e}')
 
     q.put((filename, total_length))
 
