@@ -10,8 +10,8 @@ def sample_person():
 
 
 def test_repr(sample_person):
-    assert str(p) == 'FirstName LastName'
+    assert str(sample_person) == 'FirstName LastName'
 
 
 def test_initials(sample_person):
-    assert p.initials() == 'F L'
+    assert sample_person.initials() == 'F L'
