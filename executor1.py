@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
 
 from concurrent.futures import ThreadPoolExecutor, wait, FIRST_COMPLETED
+import time
+import random
 
 
 def square(x):
+    time.sleep(random.randint(0, 3))
     return x ** 2
 
 
