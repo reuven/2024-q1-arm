@@ -16,4 +16,4 @@ with ThreadPoolExecutor() as executor:
     done, not_done = wait(all_results)
 
     for one_result in done:
-        print(one_result)
+        print(one_result.result())
