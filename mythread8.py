@@ -12,11 +12,9 @@ def hello(n):
     output[0] += n
 
 
-for i in range(10):
+for i in range(100):
     t = threading.Thread(target=hello, args=(i,), name=f'thread-{i}')
     t.start()
-
-print('Done!')
 
 while threading.active_count() > 1:
     for one_thread in threading.enumerate():
@@ -27,6 +25,3 @@ while threading.active_count() > 1:
                 pass
             else:
                 print(f'\nJoined {one_thread.name}')
-
-while not output.empty():
-    print(output.get())
