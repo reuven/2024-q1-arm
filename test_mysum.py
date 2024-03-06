@@ -7,3 +7,7 @@ def test_integers():
 
 def test_floats():
     assert mysum([10.5, 20.5, 30.5]) == 61.5
+
+
+def test_bad_floats():
+    assert mysum([0.1, 0.2]) == 0.3
