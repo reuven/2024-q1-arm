@@ -10,3 +10,4 @@ def square(x):
 with ThreadPoolExecutor() as executor:
     for one_number in range(10):
         one_result = executor.submit(square, one_number)
+        print(one_result)
