@@ -10,7 +10,7 @@ output = [0]
 def hello(n):
     time.sleep(random.randint(0, 3))
     print(f'{n} Hello!')
-    output[0] += n
+    output[0] += n     # output[0] = output[0] + n
 
 
 for i in range(10):
