@@ -3,6 +3,9 @@
 import threading
 import queue
 import glob
+import time
+
+start_time = time.time()
 
 q = queue.Queue()
 
