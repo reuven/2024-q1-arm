@@ -4,6 +4,11 @@ from concurrent.futures import ThreadPoolExecutor, wait
 
 start_time = time.time()
 
+with ThreadPoolExecutor as executor:
+    all_results = []
+    for one_filename in glob.glob('/etc/*.conf'):
+        executor.sumibt
+
 
 def file_length(filename):
     total_length = 0
@@ -16,11 +21,10 @@ def file_length(filename):
 
     q.put((filename, total_length))
 
-
-for one_filename in glob.glob('/etc/*.conf'):
     t = threading.Thread(target=file_length, args=(
         one_filename,), name=f'thread-{one_filename}')
     t.start()
+
 
 while threading.active_count() > 1:
     for one_thread in threading.enumerate():
