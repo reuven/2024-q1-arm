@@ -25,7 +25,8 @@ while threading.active_count() > 1:
             one_thread.join(0.001)   # non-blocking join
             if one_thread.is_alive():
                 # print(f'\nFailed to join {one_thread.name}; will return to it')
+                pass
             else:
                 print(f'\nJoined {one_thread.name}')
 
-print('Starting something new')
+print('Total is {output[0]}')
