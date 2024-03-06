@@ -16,4 +16,5 @@ def launch_thread():
 
 
 print('Running launch_thread')
+launch_thread()
 print('Done with launch_thread')
